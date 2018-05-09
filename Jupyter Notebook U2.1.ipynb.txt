@@ -1,0 +1,106 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "scrolled": false
+   },
+   "outputs": [],
+   "source": [
+    "# Import the `pandas` library as `pd`\n",
+    "import pandas as pd\n",
+    "\n",
+    "# Load in the data with `read_csv()`\n",
+    "digits = pd.read_csv(\"http://archive.ics.uci.edu/ml/machine-learning-databases/optdigits/optdigits.tra\", header=None)\n",
+    "\n",
+    "# Print out `digits`\n",
+    "print(digits)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# printing out the shape of the DataFrame\n",
+    "print digits.shape"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# printing out the first 5 rows of the DataFrame\n",
+    "print digits.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# printing out the first 20 rows of the DataFrame\n",
+    "print digits.head(n=20)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# printing out the last 20 rows of the DataFrame\n",
+    "print digits.tail(n=20)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# iterating through the first 5 rows\n",
+    "for it, (index, row) in enumerate(digits.iterrows()):\n",
+    "    print row\n",
+    "    if it == 4:\n",
+    "        break"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# selecting the last column with the labels\n",
+    "print digits[64]"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 2",
+   "language": "python",
+   "name": "python2"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 2
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython2",
+   "version": "2.7.14"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 1
+}
